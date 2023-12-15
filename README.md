@@ -6,7 +6,7 @@ This package provides graph data structure features:
 
 - **Adjacency list**
   - [x] Initializing with objects
-  - [ ] Initializing from a php array
+  - [x] Initializing from a php array
   - [ ] Initializing from the Materialized Path
   - [ ] Initializing from the Nested Set
   - [ ] Initializing from the Hash Table

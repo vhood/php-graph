@@ -5,7 +5,7 @@ namespace Vhood\Graph;
 interface AsArray
 {
     /**
-     * @return array<mixed,mixed>
+     * @return array<int|string,mixed>
      */
     public function asArray(): array;
 }
