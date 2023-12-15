@@ -5,10 +5,20 @@ declare(strict_types=1);
 namespace Vhood\Graph\AdjacencyList;
 
 use Vhood\Graph\AdjacencyList;
+use Vhood\Graph\AdjacencyListArray;
 use Vhood\Graph\AdjacencyListNode;
 
 class FakeAdjacencyList implements AdjacencyList
 {
+    /**
+     * @param AdjacencyListArray $array
+     * @return static
+     */
+    public function fromArray(AdjacencyListArray $array): static
+    {
+        return $this;
+    }
+
     /**
      * @param AdjacencyListNode ...$nodes
      * @return static

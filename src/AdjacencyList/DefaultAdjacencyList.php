@@ -6,6 +6,7 @@ namespace Vhood\Graph\AdjacencyList;
 
 use Vhood\Graph\AdjacencyList;
 use Vhood\Graph\AdjacencyList\Exceptions\NodeNotFoundException;
+use Vhood\Graph\AdjacencyListArray;
 use Vhood\Graph\AdjacencyListNode;
 
 final class DefaultAdjacencyList implements AdjacencyList
@@ -19,6 +20,15 @@ final class DefaultAdjacencyList implements AdjacencyList
     public function __construct(AdjacencyListNode ...$nodes)
     {
         $this->nodes = $nodes;
+    }
+
+    /**
+     * @param AdjacencyListArray $array
+     * @return static
+     */
+    public function fromArray(AdjacencyListArray $array): static
+    {
+        return new static(...$array->nodes());
     }
 
     /**
